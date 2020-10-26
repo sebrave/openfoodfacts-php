@@ -23,7 +23,7 @@ class ApiPetTest extends TestCase
 
     private $api;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $log = new Logger('name');
         $log->pushHandler(new StreamHandler('log/test.log'));
@@ -72,7 +72,7 @@ class ApiPetTest extends TestCase
 
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->recursiveDeleteDirectory('tests/tmp');
     }
